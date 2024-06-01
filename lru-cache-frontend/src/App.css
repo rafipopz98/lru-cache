@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  --color: rgba(34, 32, 32, 0.872);
+  background-color: #000;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 75px 75px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  margin: 4em 0;
+  width: fit-content;
+  border-radius: 1em;
+  background-color: #000;
+  border: 2px solid rgba(34, 32, 32, 0.872);
+  padding: 3em 3em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 0px 0px 300px 7px rgba(92, 92, 92, 0.59);
+  -moz-box-shadow: 0px 0px 300px 7px rgba(92, 92, 92, 0.59);
+  box-shadow: 0px 0px 300px 7px rgba(92, 92, 92, 0.59);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 10px;
+}
+
+.box {
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  border: 2px solid rgba(34, 32, 32, 0.872);
+  height: 50vh;
+  overflow-y: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.title {
+  font-size: 2em;
+  text-align: center;
+  padding: 0.6em 0;
+}
+
+.form input {
+  padding: 1em 0;
+  background: none;
+  border: 1px solid #353535;
+  outline: none;
+  padding: 11px 23px;
+  font-size: 16px;
+  border-radius: 50px;
+  color: #979797;
+  box-shadow: rgb(136 136 136 / 17%) 0px -23px 25px 0px inset,
+    rgb(81 81 81 / 23%) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.form button {
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  background: #979797;
+}
+
+.form .button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid #979797;
+  border-radius: 50px;
+  padding: 0.75em 1.5em;
+  background: #000;
+  color: #979797;
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.form button:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+.form button:active .button_top {
+  transform: translateY(0);
+}
+
+.allCache {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background: none;
+  border-radius: 15px;
+  display: flex;
+  color: #979797;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  box-shadow: rgb(136 136 136 / 17%) 0px -23px 25px 0px inset,
+    rgb(81 81 81 / 23%) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border: 1px solid #353535;
+  gap: 10px;
+  padding: 1em 0;
+}
+.day-text {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0.2em 2em;
+  text-align: justify;
+}
+
+.singleCache {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.singleCache .form {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.singleCache .form input {
+  width: 90%;
+}
+
+.singleCache .form button {
+  width: 10%;
+}
+
+.refresh {
+  transform: rotate(90deg);
+  font-size: 2em;
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif !important;
+}
+
+.allCache .top {
+  padding: 0.4em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notDataFound{
+  text-align: center;
+  font-size: 2em;
+}
